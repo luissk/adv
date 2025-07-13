@@ -35,8 +35,11 @@ if(!function_exists('nombre_mes')){
 }
 
 if(!function_exists('help_nombreWeb')){
-    function help_nombreWeb(){
-		return 'Anuncios del Valle';
+    function help_nombreWeb($opt = 1){
+        if($opt == 1)
+		    return 'Anuncios del Valle';
+        else if( $opt == 2 )
+            return 'adv';
     }
 }
 

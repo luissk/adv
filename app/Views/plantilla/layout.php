@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $title;?></title>
 
+    <!-- <meta property="og:title" content="Tu Título Atractivo para Redes | [Tu Marca/Empresa]">
+    <meta property="og:description" content="Una descripción concisa y persuasiva de tu página web, con un llamado a la acción si aplica. Máx. 2-3 líneas.">
+    <meta property="og:image" content="https://www.tudominio.com/ruta/a/imagen-social.jpg">
+    <meta property="og:url" content="https://www.tudominio.com/">
+    <meta property="og:type" content="website"> 
+    <meta property="og:locale" content="es_PE"> 
+    <meta name="twitter:card" content="summary_large_image"> 
+    <meta name="twitter:site" content="@TuUsuarioDeTwitter"> 
+    <meta name="twitter:creator" content="@TuUsuarioDeTwitter"> 
+    <meta name="twitter:title" content="Tu Título Corto para X | [Tu Marca]"> 
+    <meta name="twitter:description" content="Descripción concisa para X, optimizada para un mensaje directo."> 
+    <meta name="twitter:image" content="https://www.tudominio.com/ruta/a/imagen-twitter-social.jpg">  -->
+
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import bootstrap.css-->
@@ -21,7 +34,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light py-3 shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bolder text-success" href="<?php echo base_url();?>">Anuncios del Valle</a>
+            <a class="navbar-brand fw-bolder text-success" href="<?php echo base_url();?>"><?=help_nombreWeb()?></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-controls="mynavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

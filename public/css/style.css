@@ -28,6 +28,31 @@ footer{
     background-color: rgba(0, 0, 0, .5);
     border-radius: 10px;
 }
+.carousel-item img {
+    width: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+}
+
+/* Altura de 800px para pantallas grandes (desde 'md' breakpoint de Bootstrap) */
+@media (min-width: 768px) { /* Esto corresponde al breakpoint 'md' de Bootstrap */
+    .carousel-item img {
+        height: 500px;
+    }
+}
+
+/* Altura adaptable para pantallas más pequeñas (menos de 768px) */
+@media (max-width: 992px) { /* Esto cubre 'sm' y 'xs' */
+    .carousel-item img {
+        height: 50vh; /* Usa un porcentaje del viewport height para que se adapte */
+        max-height: 350px; /* Limita la altura máxima en móviles para que no sea excesiva */
+    }
+}
+@media (max-width: 767.98px) { /* Esto cubre 'sm' y 'xs' */
+    .carousel-item img {
+        height: 50vh; /* Usa un porcentaje del viewport height para que se adapte */
+        max-height: 250px; /* Limita la altura máxima en móviles para que no sea excesiva */
+    }
+}
 
 .home-sec3{
     background-color: #ededef;

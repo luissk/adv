@@ -150,7 +150,7 @@ echo "</pre>"; */
                                 echo "<br>";
                                 echo "<a class='text-decoration-none text-danger eliminarAvatar btn' data-avatar='".$usuario['us_avatar']."'><i class='fas fa-trash-alt'></i> eliminar avatar</a>";
                             }else{
-                                echo "<img src='".base_url('public/images/avatar/default.png')."' alt='avatar'>";
+                                echo "<img src='".base_url('public/images/avatar/default.jpg')."' alt='avatar'>";
                             }
                             ?>
                         </div>

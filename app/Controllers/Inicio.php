@@ -39,7 +39,7 @@ class Inicio extends BaseController
             }
         }
 
-        $data['title']          = 'Inicio pe';
+        $data['title']          = 'Inicio | '.help_nombreWeb();
         $data['act_menuinicio'] = 1;
 
         $anuncios = $this->modeloAnuncio->listarAnunciosAdmin(0, 19, '', [2,4,5]);
@@ -294,7 +294,7 @@ class Inicio extends BaseController
 
             $nombreAnun = $anuncio['an_nombre'];
 
-            $data['title']    = $nombreAnun;
+            $data['title']    = $nombreAnun . ' | '.help_nombreWeb();
             $data['anuncio']  = $anuncio;
             $data['imagenes'] = $this->modeloAnuncio->getImages($id);
 
