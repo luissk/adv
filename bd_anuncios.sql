@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-07-2025 a las 16:59:02
--- Versión del servidor: 10.4.27-MariaDB
--- Versión de PHP: 8.0.25
+-- Tiempo de generación: 27-09-2025 a las 22:37:26
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -36,7 +36,6 @@ CREATE TABLE `anuncio` (
   `idcate` tinyint(4) NOT NULL,
   `precio` decimal(10,2) DEFAULT NULL,
   `precio_mostrar` tinyint(4) DEFAULT NULL,
-  `caracteristicas` varchar(255) DEFAULT NULL,
   `url_video` varchar(150) DEFAULT NULL,
   `ubigeo` mediumint(9) DEFAULT NULL,
   `direccion` varchar(150) DEFAULT NULL,
@@ -2364,7 +2363,8 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`idusuario`, `us_codusuario`, `us_email`, `us_pass`, `us_nombre_razon`, `us_ruc`, `us_avatar`, `us_linkact`, `us_linkrecup`, `us_fechacreacion`, `idtipo_usuario`, `us_status`, `us_telefono`, `us_whatsapp`, `us_website`, `us_facebook`, `us_instagram`, `us_youtube`, `us_tiktok`, `us_direccion`, `us_ubigeo`, `us_zoom`, `us_google`, `count_anuncios`, `count_anuncios_used`) VALUES
-(1, '1234567899', 'alberto_1102@hotmail.com', '$2a$12$YmtIBS/VsxVywSQHV4A2.uFU8VcIdeY.pJDE0ZjKocqkKMwFw/Hka', 'Luis Alberto Calderón Sánchez', '45487229', '1234567899.jpg', NULL, NULL, '2024-02-26 21:27:58', 1, 1, '975089485', '975089485', '', '', '', '', '', 'calle 3 de octubre 22mz k lote 12 sector sintuco', 130203, 0, NULL, 0, 0);
+(1, '1234567899', 'alberto_1102@hotmail.com', '$2a$12$YmtIBS/VsxVywSQHV4A2.uFU8VcIdeY.pJDE0ZjKocqkKMwFw/Hka', 'Luis Alberto Calderón Sánchez', '45487229', '', NULL, NULL, '2024-02-26 21:27:58', 1, 1, '975089485', '975089485', '', '', '', '', '', 'calle 3 de octubre 22mz k lote 12 sector sintuco', 130203, 0, NULL, 0, 0),
+(2, 'xnttdbw4rr', 'lcalderon.1188@gmail.com', '$2a$12$YmtIBS/VsxVywSQHV4A2.uFU8VcIdeY.pJDE0ZjKocqkKMwFw/Hka', 'Luis Alberto Calderón Sánchez', NULL, NULL, NULL, '', '2025-07-13 21:49:24', 2, 1, NULL, NULL, '', '', '', '', '', '', 0, 0, 1, 10, 0);
 
 --
 -- Índices para tablas volcadas
@@ -2490,7 +2490,7 @@ ALTER TABLE `tipo_usuario`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restricciones para tablas volcadas

@@ -235,7 +235,6 @@ class Anuncio extends BaseController
                 'nombre'          => trim($this->request->getVar('nombre')),
                 'precio'          => trim($this->request->getVar('precio')),
                 'nomostrar'       => $this->request->getVar('nomostrar'),
-                'caracteristicas' => trim($this->request->getVar('caracteristicas')),
                 'descripcion'     => trim($this->request->getVar('descripcion')),
                 'video'           => trim($this->request->getVar('video')),
                 'principal'       => $this->request->getVar('principal'),
@@ -262,7 +261,7 @@ class Anuncio extends BaseController
                 ],
                 'nombre' => [
                     'label' => 'Nombre', 
-                    'rules' => 'required|regex_match[/^[a-zA-ZñÑáéíóúÁÉÍÓÚ. 0-9]+$/]|max_length[100]',
+                    'rules' => 'required|regex_match[/^[a-zA-ZñÑáéíóúÁÉÍÓÚ.\- 0-9]+$/]|max_length[100]',
                     'errors' => [
                         'required'    => '* El {field} es requerido.',
                         'regex_match' => '* El {field} no es válido.',
@@ -284,14 +283,6 @@ class Anuncio extends BaseController
                     'errors' => [
                         'integer'    => '* El {field} sólo contiene números.',
                         'max_length' => '* El {field} debe contener máximo 1 caracteres.'
-                    ]
-                ],
-                'caracteristicas' => [
-                    'label' => 'Características', 
-                    'rules' => 'permit_empty|regex_match[/^[a-zA-ZñÑáéíóúÁÉÍÓÚ 0-9\r\n]+$/]|max_length[255]',
-                    'errors' => [
-                        'regex_match' => '* Las {field} sólo letras y números',
-                        'max_length'  => '* Las {field} debe contener máximo 255 caracteres.'
                     ]
                 ],
                 'descripcion' => [

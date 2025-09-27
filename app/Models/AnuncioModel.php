@@ -20,21 +20,21 @@ class AnuncioModel extends Model{
     }
 
     public function crearAnuncio($idusuario, $data){
-        $query = "insert into anuncio(an_nombre,an_descripcion,idusuario,idcate,precio,precio_mostrar,caracteristicas,url_video,ubigeo,
-        direccion,contact_email,contact_fono,contact_whatsapp,codanuncio,an_status,an_fechacreacion) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,now())";
+        $query = "insert into anuncio(an_nombre,an_descripcion,idusuario,idcate,precio,precio_mostrar,url_video,ubigeo,
+        direccion,contact_email,contact_fono,contact_whatsapp,codanuncio,an_status,an_fechacreacion) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,now())";
 
         $st = $this->db->query($query, [$data['nombre'],$data['descripcion'],$idusuario,$data['categoria'],$data['precio'],$data['nomostrar'],
-            $data['caracteristicas'],$data['video'],$data['ubigeo'],$data['direccion'],$data['email'],$data['telefono'],$data['whatsapp'],$data['codanuncio'],1]);
+            $data['video'],$data['ubigeo'],$data['direccion'],$data['email'],$data['telefono'],$data['whatsapp'],$data['codanuncio'],1]);
 
         return $this->db->insertID();
     }
 
     public function modificarAnuncio($idusuario, $idanuncio_post, $data){
-        $query = "update anuncio set an_nombre=?,an_descripcion=?,idcate=?,precio=?,precio_mostrar=?,caracteristicas=?,url_video=?,ubigeo=?,
+        $query = "update anuncio set an_nombre=?,an_descripcion=?,idcate=?,precio=?,precio_mostrar=?,url_video=?,ubigeo=?,
         direccion=?,contact_email=?,contact_fono=?,contact_whatsapp=?, levanta_obs = ? WHERE idanuncio=? and idusuario=?";
 
         $st = $this->db->query($query, [$data['nombre'],$data['descripcion'],$data['categoria'],$data['precio'],$data['nomostrar'],
-            $data['caracteristicas'],$data['video'],$data['ubigeo'],$data['direccion'],$data['email'],$data['telefono'],$data['whatsapp'],$data['levantaobs'],$idanuncio_post, $idusuario]);
+            $data['video'],$data['ubigeo'],$data['direccion'],$data['email'],$data['telefono'],$data['whatsapp'],$data['levantaobs'],$idanuncio_post, $idusuario]);
 
         return $st;
     }
@@ -87,7 +87,7 @@ class AnuncioModel extends Model{
 
     public function getAnu_idanu_idusu($idusuario, $idanuncio){
         $query = "select anu.idanuncio, anu.an_nombre, anu.an_fechacreacion, anu.idusuario, anu.idcate, anu.precio, anu.precio_mostrar,
-        anu.codanuncio, anu.an_status, anu.caracteristicas, anu.an_descripcion, anu.url_video, anu.direccion,
+        anu.codanuncio, anu.an_status, anu.an_descripcion, anu.url_video, anu.direccion,
         anu.contact_email, anu.contact_fono, anu.contact_whatsapp,
         DATEDIFF(anu.hastafecha, now()) diasactivo,
         anu.an_activo,anu.activadofecha, anu.hastafecha, anu.activousuario, anu.observadopor, anu.estado_ant, anu.levanta_obs,
@@ -215,7 +215,7 @@ class AnuncioModel extends Model{
 
     public function getAnu_idanu($idanuncio, $status = [1,2,3,4,5,6,7]){
         $query = "select anu.idanuncio, anu.an_nombre, anu.an_fechacreacion, anu.idusuario, anu.idcate, anu.precio, anu.precio_mostrar,
-        anu.codanuncio, anu.an_status, anu.caracteristicas, anu.an_descripcion, anu.url_video, anu.direccion,
+        anu.codanuncio, anu.an_status, anu.an_descripcion, anu.url_video, anu.direccion,
         anu.contact_email, anu.contact_fono, anu.contact_whatsapp,
         date_format(anu.an_fechacreacion, '%d/%m/%Y') fechac,
         DATEDIFF(anu.hastafecha, now()) diasactivo,

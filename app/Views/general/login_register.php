@@ -34,7 +34,7 @@
                                 <p class="text-danger"><?=session('errors.loginPassword')?></p>
                             </div>
 
-                            <button class="btn btn-danger mt-3 d-block px-5 form-control-lg" id="btnLogin">Ingresar</button>
+                            <button class="btn btn-danger mt-3 d-block px-5 form-control-lg" id="btnLogin" type="submit">Ingresar</button>
                         </form>
                         <div class="text-end">
                             <a data-bs-toggle="modal" data-bs-target="#modalRecuperaPassword" class="btn link-dark">¿Olvidaste tu Contraseña?</a>

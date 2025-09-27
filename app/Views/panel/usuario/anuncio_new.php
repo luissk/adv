@@ -15,7 +15,6 @@ if( isset($anuncio) && $anuncio ){
     $bd_precio          = $anuncio['precio'];
     $bd_mostrar         = $anuncio['precio_mostrar'];
     $bd_codanuncio      = $anuncio['codanuncio'];
-    $bd_caracteristicas = $anuncio['caracteristicas'];
     $bd_descripcion     = $anuncio['an_descripcion'];
     $bd_urlvideo        = $anuncio['url_video'];
     $bd_direccion       = $anuncio['direccion'];
@@ -51,7 +50,6 @@ if( isset($anuncio) && $anuncio ){
     $bd_precio          = '';
     $bd_mostrar         = '';
     $bd_codanuncio      = '';
-    $bd_caracteristicas = '';
     $bd_descripcion     = '';
     $bd_urlvideo        = '';
     $bd_direccion       = '';
@@ -122,27 +120,10 @@ if( isset($anuncio) && $anuncio ){
                 </div>
             </div>
 
-            <div class="col-sm-12 mt-2">
-                <p class="fw-semibold bg-light"><i class="fas fa-tag"></i> Características</p>
-            </div>
-            <div class="col-sm-6">
-                <div class="form-group pb-2">
-                    <textarea class="form-control rounded-0" name="caracteristicas" id="caracteristicas" rows="7"><?=$bd_caracteristicas?></textarea>
-                    <p class="text-danger" id="msj-caracteristicas"></p>
-                </div>
-            </div>
-            <div class="col-sm-6 d-flex align-items-center texto-size-13">
-                <i class="text-secondary">Ingrese una característica por cada línea. Ejemplo:<br>
-                    Característica 1<br>
-                    Característica 2<br>
-                    Característica 3<br>
-                    ...
-                </i>
-            </div>
             <div class="col-sm-12">
                 <div class="form-group pb-2">
                     <label for="descripcion" class="mb-2 fw-semibold bg-light d-block"><i class="fas fa-tags"></i> Descripción</label>
-                    <textarea class="form-control rounded-0" name="descripcion" id="descripcion" rows="10"><?=$bd_descripcion?></textarea>
+                    <textarea class="form-control rounded-0" name="descripcion" id="descripcion" rows="12"><?=$bd_descripcion?></textarea>
                     <p class="text-danger" id="msj-descripcion"></p>
                 </div>
             </div>
